@@ -1,0 +1,83 @@
+/**index.wxss**/
+.header{
+  height:90rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:10rpx;
+  background: #1c6132;
+  color:#fff;
+}
+.naviga{
+  font-size:32rpx
+}
+.header span{
+  margin-right:30rpx;
+  margin-left:10rpx;
+  flex:1
+}
+.logo{
+  height:90rpx;
+  width:90rpx;
+}
+.content{
+  width:100%;
+  font-size:28rpx;
+}
+.content .item{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  height: 80rpx;
+  padding:8rpx;
+
+  border-bottom:.5rpx solid #f0f0f0;
+  
+}
+.content .item text{
+  padding:10rpx;
+}
+.content .item .count{
+  color:#777;
+  font-size:24rpx;
+}
+
+.content .item image{
+  width:80rpx;
+  height:80rpx;
+  border-radius:40rpx;
+}
+.content .item .title{
+  width:400rpx;
+  flex:auto;
+  padding-left:20rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.nav{
+  width:100%;
+  font-size:28rpx;
+}
+.active{
+  color:#fff;
+  background:#369219;
+  padding:8rpx;
+  border-radius:10rpx;
+}
+.radio-group{
+  height: 80rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #f6f6f6;
+}
+.radio {
+  display: block;
+  color:#369219;
+}
+.radio radio{
+  opacity: 0;
+  display: none;
+}

@@ -1,0 +1,42 @@
+/* collect.wxss */
+.nav-title{
+  flex: 1;
+  background: #f6f6f6;
+  padding:20rpx;
+  margin-bottom:20rpx;
+  font-size:32rpx;
+  color:#369219;
+}
+.item{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 80rpx;
+  padding:8rpx;
+  border-bottom:.5rpx solid #f0f0f0;
+  font-size:28rpx;
+}
+.item button{
+ font-size:26rpx;
+}
+.item text{
+  padding:10rpx;
+}
+ .item .count{
+  color:#777;
+  font-size:24rpx;
+}
+
+ .item image{
+  width:80rpx;
+  height:80rpx;
+  border-radius:40rpx;
+}
+ .item .title{
+  width:400rpx;
+  flex:auto;
+  padding-left:20rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

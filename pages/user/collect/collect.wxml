@@ -1,0 +1,10 @@
+<!-- collect.wxml -->
+<view class="section">
+<view class="nav-title">操作列表</view>
+    <view  class="item"  wx:for="{{collectList}}" wx:key="{{item.id}}" >
+        <image src="{{item.author.avatar_url}}"></image>
+        <navigator class="title" url="/pages/detail/detail?id={{item.id}}" hover-class="navigator-hover" >{{item.title}}</navigator>
+        <button type="primary" size="mini" data-id="{{item.id}}" bindtap="deCollect" hover-class="other-button-hover">取消收藏 </button>
+    </view>
+    
+</view>

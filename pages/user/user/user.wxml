@@ -1,0 +1,35 @@
+<!-- user.wxml -->
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+                    <image src="{{userInfo.avatar_url}}" style="width: 50px; height: 50px; display: block" />
+                </view>
+                <view class="weui-cell__bd">
+                    <view>{{userInfo.loginname}}</view>
+                    <view style="font-size: 13px;color: #888888;">{{userInfo.score}}积分</view>
+                </view>
+            </view>
+            <navigator class="weui-cell weui-cell_access" url="/pages/user/newtopic/newtopic" hover-class="navigator-hover">
+                <view class="weui-cell__bd">
+                    <view style="display: inline-block; vertical-align: middle">发布话题</view>
+                </view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" url="/pages/user/collect/collect" hover-class="navigator-hover">
+                <view class="weui-cell__bd">
+                    <view style="display: inline-block; vertical-align: middle">我的收藏</view>
+                </view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" url="/pages/user/message/message" hover-class="navigator-hover">
+                <view class="weui-cell__bd">
+                    <view style="display: inline-block; vertical-align: middle">我的消息</view>
+                    <view class="weui-badge" style="margin-left: 5px;" wx:if="{{newMessage > 0}}">{{newMessage}}</view>
+                </view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+    </view>
+</view>
+</view>

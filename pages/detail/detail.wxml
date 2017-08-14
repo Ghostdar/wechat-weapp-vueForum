@@ -1,0 +1,38 @@
+<!--detail.wxml-->
+<import src="../../component/wxParse/wxParse.wxml" />
+<view class="title">
+  <text class="top" wx:if="{{topic.top}}">置顶</text>
+  <text class="middle">{{topic.title}}</text>
+  <button type="primary" size="mini"  bindtap="collect" hover-class="other-button-hover" style=" font-size:26rpx;">{{is_collect?'取消收藏':'收藏'}}</button> 
+</view>
+<view class="detail"> 发布于 {{topic.create_at}} - 作者 {{topic.author.loginname}} - {{ topic.visit_count}} 次浏览 - 来自 {{topic.tab}} </view>
+<view class="content">
+  <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+</view>
+<view class="reply">
+  <view class="reply-title">回复({{topic.replies.length}})</view>
+  <view class="item" wx:if="{{topic.replies}}" wx:for="{{topic.replies}}" wx:key="{index}">
+    <view class="author">
+      <image src="{{item.author.avatar_url}}"></image>
+      <text class="author-name">{{item.author.loginname}}</text>
+      <text class="reply-time">{{index+1}}楼 - {{item.create_at}}</text>
+    </view>
+    <text class="reply-cot">{{item.content}}</text>
+  </view>
+</view>
+<view wx:if="is_login" >
+<view class="reply-title">添加回复</view>
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell">
+    <view class="weui-cell__bd">
+      <textarea class="weui-textarea" value="{{reply}}" placeholder="请输入文本" style="height: 3.3em" bindinput="contentChange" maxlength="200"  />
+     
+      <view class="weui-textarea-counter">{{reply.length}}/200</view>
+    </view>
+  </view>
+</view>
+  <view class="weui-btn-area">
+    <button class="weui-btn" type="primary" bindtap="newReply" style="font-size:28rpx;width:50%">发布</button>
+</view>
+
+</view>

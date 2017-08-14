@@ -1,0 +1,31 @@
+<!-- newtopic.wxml -->
+<view class="nav-title">发布主题</view>
+
+<view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请输入标题" bindinput="titleChange" />
+        </view>
+    </view>
+</view>
+<view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+        <view class="weui-cell__bd">
+            <textarea class="weui-textarea" placeholder="请输入内容" style="height: 300rpx" bindinput="contentChange" maxlength="500" />
+            <view class="weui-textarea-counter">{{content.length}}/500</view>
+        </view>
+    </view>
+</view>
+<view class="weui-cell weui-cell_select">
+    <view class="weui-cell__hd weui-cell__hd_in-select-after">
+        <view class="weui-label">分类:</view>
+    </view>
+    <view class="weui-cell__bd">
+        <picker bindchange="bindTabChange" value="{{tabIndex}}" range="{{tabs}}">
+            <view class="weui-select weui-select_in-select-after">{{tabs[tabIndex]}}</view>
+        </picker>
+    </view>
+</view>
+<view class="weui-btn-area">
+    <button class="weui-btn" type="primary" bindtap="newTopic" style="font-size:28rpx;width:80%">发布</button>
+</view>

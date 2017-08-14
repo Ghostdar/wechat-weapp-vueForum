@@ -1,0 +1,12 @@
+<!-- login.wxml -->
+
+<view class="section">
+    <text class="title">Accesstoken登陆</text>
+  <input class="login-input" bindinput="bindKeyInput" placeholder="请输入accesstoken" />
+ <button type="primary" size="mini"   bindtap="accessLogin" hover-class="other-button-hover"> 登陆 </button>
+</view>
+
+<view class="section">
+    <text class="title">二维码登陆</text>
+    <button type="primary" size="mini"   bindtap="scanCode" hover-class="other-button-hover"> 点击扫描二维码</button>
+</view>

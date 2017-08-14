@@ -1,0 +1,51 @@
+/**detail.wxss**/
+@import "../../component/wxParse/wxParse.wxss";
+.title{
+  padding:16rpx;
+  font-size:46rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight:bold;
+  word-wrap:break-word;
+  line-height:150%;
+}
+.middle{
+  flex: 2
+}
+.detail{
+  padding:16rpx;
+  border-bottom:1px solid #e5e5e5;
+  font-size:26rpx;
+  color:#838383;
+}
+.content{
+  width:718rpx;
+  padding:16rpx;
+  font-size:28rpx;
+}
+.reply-title{
+  padding:16rpx;
+  margin-top:20rpx;
+  border-bottom:.5rpx solid #f0f0f0;
+  border-top:.5rpx solid #f0f0f0;
+  background:#f6f6f6;
+  color:#1c6132;
+}
+.weui-cells{
+  font-size:28rpx;
+  margin-bottom:20rpx;
+  width:90%;
+  margin:20rpx auto;
+  border:1rpx solid #d9d9d9;
+  border-radius:10rpx;
+}
+.weui-cell__bd{
+  font-size:28rpx;
+}
+.weui-cells::before {
+  border-top:none
+}
+.weui-cells::after{
+  border-bottom:none;
+}

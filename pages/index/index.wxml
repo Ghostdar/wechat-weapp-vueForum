@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="header">
+    <image class="logo" src="../../static/image/vue.png" alt=""></image>
+    <span>Vue.js</span>
+    <text>{{app.globalData.accesstoken}}</text>
+    <navigator class="naviga" wx:if="{{isLogin}}" url="/pages/user/user/user" hover-class="navigator-hover">我的</navigator>
+    <navigator class="naviga" wx:else url="/pages/user/login/login" hover-class="navigator-hover">登陆</navigator>
+</view>
+<view class="container">
+  <view class="nav">
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio" wx:for="{{navItems}}" wx:key="{{item.value}}" >
+        <view class="{{item.checked ? 'active' : 'normal'}}">{{item.name}}</view>
+        <radio value="{{item.value}}" checked="{{item.checked}}" />
+      </label>
+    </radio-group>
+  </view>
+  <view class="content">
+    <navigator  class="item"  wx:for="{{dataItems}}" wx:key="{{item.value}}" url="/pages/detail/detail?id={{item.id}}" hover-class="navigator-hover">
+        <image src="{{item.author.avatar_url}}"></image>
+        <text class="title"><text wx:if="{{item.top}}" class="top">置顶</text>{{item.title}}</text>
+        <text class="count">{{item.reply_count}}/{{item.visit_count}}</text>
+    </navigator>
+
+  </view>
+</view>

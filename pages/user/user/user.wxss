@@ -1,0 +1,7 @@
+/* user.wxss */
+.weui-cell::before{
+  left: 0;
+}
+.weui-cells {
+  font-size:32rpx;
+}

@@ -1,0 +1,36 @@
+<!-- message.wxml -->
+<view class="section">
+    <view class="title"><text>未读消息/</text><text style="text-decoration:underline" bindtap="markMsg">全部标为已读</text></view>
+    <view class="reply">
+        <view class="item" wx:if="{{messageList.hasnot_read_messages.length > 0}}" wx:for="{{messageList.hasnot_read_messages}}" wx:key="{item.id}">
+            <view class="author">
+                <image src="{{item.author.avatar_url}}"></image>
+                <text class="author-name">{{item.author.loginname}}</text>
+                <text class="reply-time">{{item.reply.create_at}} - 来自：</text>
+    <navigator class="for-topic" url="/pages/detail/detail？id={{item.topic.id}}" hover-class="navigator-hover">{{item.topic.title}}</navigator>
+            </view>
+            <text class="reply-cot">{{item.reply.content}}</text>
+        </view>
+        <view wx:if="{{messageList.hasnot_read_messages.length==0}}" >
+            暂无未读消息
+        </view>
+    </view>
+</view>
+
+<view class="section">
+    <text class="title">已读消息</text>
+    <view class="reply">
+        <view class="item"  wx:for="{{messageList.has_read_messages}}" wx:key="{item.id}">
+            <view class="author">
+                <image src="{{item.author.avatar_url}}"></image>
+                <text class="author-name">{{item.author.loginname}}</text>
+                <text class="reply-time">{{item.reply.create_at}}</text>
+                <navigator class="for-topic" url="/pages/detail/detail?id={{item.topic.id}}" hover-class="navigator-hover">{{item.topic.title}}</navigator>
+            </view>
+            <text class="reply-cot">{{item.reply.content}}</text>
+        </view>
+        <view wx:if="{{messageList.has_read_messages.length==0}}" >
+            暂无消息
+        </view>
+    </view>
+</view>

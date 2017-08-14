@@ -1,0 +1,25 @@
+/**login.wxss**/
+.section{
+  padding-bottom:20rpx;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  font-size:28rpx;
+}
+.title{
+  flex: 1;
+  background: #f6f6f6;
+  padding:20rpx;
+  margin-bottom:20rpx;
+  font-size:32rpx;
+  color:#369219;
+}
+.login-input{
+  width:400rpx;
+  height:60rpx;
+  margin:0 auto 20rpx auto;
+  padding:0 20rpx;
+  border:2rpx solid #f6f6f6;
+  border-radius:10rpx;
+}
