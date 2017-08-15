@@ -19,7 +19,7 @@ Page({
   onLoad: function () {
     // 设置顶部标题
     wx.setNavigationBarTitle({
-      title: 'Vue 交流'
+      title: 'Vue 中文论坛'
     })
     // 初始化当前页数
     wx.setStorageSync('page', 1)
